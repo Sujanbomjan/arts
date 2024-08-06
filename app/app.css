@@ -1,0 +1,129 @@
+html {
+  overflow-x: hidden;
+}
+
+.transition-smooth {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.mobile-menu-background {
+  background-color: #265e46;
+}
+@media only screen and (min-width: 1024px) {
+  .mobile-menu-background {
+    background: linear-gradient(#0e251d, #0e251d), url("../public/img1.webp");
+    background-blend-mode: color;
+  }
+}
+
+.green-background {
+  background: linear-gradient(#0e251d, #0e251d), url("../public/araya.webp");
+  background-position: center;
+  background-size: cover;
+  background-attachment: initial;
+  background-blend-mode: color;
+  height: 100%;
+}
+
+.scroll-to-top {
+  width: auto !important;
+  height: auto !important;
+  background: transparent !important;
+  right: 15px !important;
+}
+
+.slick-arrow {
+  display: none !important;
+}
+
+@media only screen and (min-width: 1024px) {
+  .green-background {
+    background-attachment: fixed;
+  }
+}
+
+/* swiper  */
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper {
+  width: 100%;
+  height: 70px;
+  margin-left: 0 !important;
+}
+
+/* main slider  */
+.mySwiper2 {
+  height: 90%;
+  width: 100%;
+}
+
+.mySwiper2 .swiper-slide {
+  /* height: 400px !important; */
+  height: auto !important;
+}
+
+/* thumb slider  */
+.mySwiper {
+  margin-top: 10px !important;
+  /* overflow-x: scroll !important; */
+}
+
+.mySwiper .swiper-slide {
+  opacity: 0.5;
+  width: 70px !important;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+  border-top: 2px solid rgb(67, 160, 71) !important;
+}
+
+.mySwiper .swiper-wrapper {
+  @apply justify-start;
+}
+
+/* skeletal css */
+
+.animate-shimmer {
+  background-image: linear-gradient(
+    90deg,
+    #e7edf1 0px,
+    #f7f6fa 200px,
+    #e7edf1 400px
+  );
+  background-size: 1200px;
+  animation: shimmer 1.5s infinite linear;
+}
+
+.dark-animate-shimmer {
+  background-image: linear-gradient(
+    90deg,
+    #524f4f 0px,
+    #807c7c 200px,
+    #524f4f 400px
+  );
+  background-size: 1200px;
+  animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -400px;
+  }
+
+  50% {
+    background-position: 400px;
+  }
+
+  100% {
+    background-position: 700px;
+  }
+}

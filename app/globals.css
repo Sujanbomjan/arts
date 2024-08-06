@@ -1,0 +1,64 @@
+@import url(./app.css);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 255 255 255;
+    --color-primary-dark: 250 250 250;
+    --color-accent: 67 160 71;
+    --color-accent-dark: 54 128 57;
+    --text-color-header: 55 65 81;
+    --text-color-body: 75 85 99;
+  }
+
+  *:focus {
+    outline: none;
+  }
+
+  body {
+    overflow-x: hidden;
+    padding: 0 !important;
+  }
+
+  /* dark mode according to the system preference */
+  /* @media (prefers-color-scheme: dark) {
+    :root {
+      --color-primary: 100 100 100;
+      --color-primary-dark: 100 100 100;
+      --color-accent: 67 160 71;
+      --color-accent-dark: 54 128 57;
+      --text-color-header: 55 65 81;
+      --text-color-body: 75 85 99;
+    }
+  } */
+
+  /* dark mode according to explicit selection by user */
+  :root[data-theme="dark"] {
+    --color-primary: 100 100 100;
+    --color-primary-dark: 243 244 246;
+    --color-accent: 67 160 71;
+    --color-accent-dark: 54 128 57;
+    --text-color-header: 55 65 81;
+    --text-color-body: 75 85 99;
+  }
+}
+
+@layer components {
+  .header-1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  .header-2 {
+    @apply text-3xl sm:text-4xl md:text-5xl;
+  }
+  .header-3 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+  .header-4 {
+    @apply text-base sm:text-lg md:text-xl;
+  }
+  .body {
+    @apply text-base md:text-lg;
+  }
+}
